@@ -1,0 +1,379 @@
+/****************************************
+General section 
+*****************************************/
+
+* {
+	-fx-font-family: "Montserrat";
+	-fx-font-weight: bold;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+		-fx-border-color: transparent;
+}
+
+.scroll-pane .scroll-bar:vertical {
+    -fx-opacity: 0;
+    -fx-max-width: 0;
+}
+
+.scroll-pane .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-pref-height: 0;
+}
+
+.item {
+	-fx-padding: 10px 5px;
+	-fx-background-radius: 10px;
+	-fx-cursor: hand;
+}
+
+
+/* BalanceLabel */
+.balance-label {
+    -fx-alignment: center-right;
+		-fx-font-weight: bold;
+}
+
+/*Progress bar*/
+.budget-progress-bar {
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-border-radius: 1000px; /* Adjust this value for roundness */
+    -fx-padding: 0; /* Remove any padding */
+}
+
+.progress-pane {
+    -fx-min-height: 20px; /* Adjust based on your design */
+    -fx-background-radius: 1000px;
+}
+
+.transaction-item {
+	-fx-border-radius: 10px;
+	-fx-border-width: 1px;
+}
+
+
+
+.line-chart {
+	-fx-padding: 0 20px;
+}
+
+/****************************************
+Dialogs section 
+*****************************************/
+/*Transaction Form*/
+/* layout.css */
+
+.modal-content {
+	-fx-padding: 20; 
+	-fx-alignment: center; 
+	-fx-background-radius: 20px;
+}
+
+/* Form container */
+.transaction-form {
+    -fx-padding: 10px;
+}
+
+/* Label-Field layout */
+.label-field-row {
+    -fx-spacing: 10px;
+		-fx-min-width: 370px;
+}
+
+/* Buttons row layout */
+.buttons-row {
+    -fx-alignment: center-right;
+}
+
+/* Button within the form */
+.button {
+    -fx-min-width: 80px;
+    -fx-padding: 5px 10px;
+		-fx-cursor: hand;
+		-fx-border-radius: 5px;
+		-fx-background-radius: 5px;
+		-fx-border-width: 2px;
+}
+
+/* Input field */
+.input-field {
+    -fx-max-width: 200px;
+		-fx-background-radius: 10px;
+		-fx-border-radius: 10px;
+}
+
+.input-field .text-field {
+	-fx-background-radius: 10px;
+}
+
+/* ComboBox (source and destination accounts) */
+.combo-box {
+    -fx-min-width: 200px;
+		-fx-background-radius: 10px;
+		-fx-border-radius: 10px;
+}
+
+
+/****************************************
+Sidebar navigation pane section
+*****************************************/
+.sidebar-menu {
+    -fx-padding: 0; /* Remove padding */
+		-fx-max-width: 200px;
+		-fx-min-width: 200px;
+		-fx-border-width: 0 1px 0 0; /* Top, Right, Bottom, Left */
+		-fx-border-style: solid;      /* Border style */
+		-fx-border-color: Grey;      /* Border color */
+}
+
+.collapsed-sidebar-menu {
+		-fx-min-width: 55px;
+}
+
+.logo-toggle-container {
+    -fx-pref-height: 50px;
+    -fx-alignment: CENTER_RIGHT; /* Align to right */
+}
+
+.toggle-button {
+    -fx-background-radius: 50%; /* Makes the button a circle */
+    -fx-alignment: center; /* Center-align the content */
+		-fx-cursor: hand;
+}
+
+.navigation-pane {
+    -fx-pref-height: 50px;
+}
+
+.nav-icon {
+		-fx-min-width: 20px;
+		-fx-min-height: 20px;
+		-fx-background-size: contain; /* Ensure the image fits the label */
+		-fx-background-repeat: no-repeat; /* Avoid repeating the image */
+		-fx-background-position: center; 	
+}
+
+/****************************************
+Cross page section
+*****************************************/
+.main-layout {
+	-fx-padding: 20px;
+}
+
+.page-title {
+    -fx-font-size: 32px;
+    -fx-font-family: 'Montserrat';
+    -fx-font-weight: bold;
+}
+
+.add-button {
+    -fx-font-size: 25px;
+    -fx-font-family: 'Montserrat';
+    -fx-background-radius: 50em;
+		-fx-border-radius: 50em;
+    -fx-min-width: 50px;
+    -fx-min-height: 50px;
+		-fx-cursor: hand;
+		-fx-border-width: 2px;
+		-fx-alignment: center;
+}
+
+.nav-button {
+    -fx-font-size: 14px;
+    -fx-padding: 5px 10px;
+}
+
+.prev-button, .next-button {
+    -fx-font-size: 14px;
+}
+
+.account-main-layout, .savings-main-layout {
+	-fx-padding: 20px;
+}
+
+.saving-box {
+	-fx-max-width: 300px;
+	-fx-padding: 30px 10px;
+}
+
+.saving-summary-number {
+	-fx-font-size: 25px;
+	-fx-font-weight: bold;
+}
+
+/* Toggle button padding and font */
+.nav-button, .analysis-toggle-button {
+    -fx-background-color: transparent;
+    -fx-border-style: none;
+    -fx-padding: 5px 10px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-background-insets: 1 0 1 1;
+}
+
+/* Toggle button rounded corners */
+.prev-button, .income-toggle {
+    -fx-border-width: 1px 0 1px 1px;
+    -fx-border-radius: 10px 0 0 10px;
+    -fx-background-radius: 10px 0 0 10px;
+}
+
+.next-button, .expense-toggle {
+    -fx-border-width: 1px;
+    -fx-border-radius: 0 10px 10px 0;
+    -fx-background-radius: 0 10px 10px 0;
+}
+
+/* Disabled button opacity */
+.nav-button:disabled {
+    -fx-opacity: 0.5;
+}
+
+/****************************************
+Overview page section
+*****************************************/
+
+/* Balance label layout */
+.summary-pane .balance-label {
+    -fx-font-size: 25px;
+    -fx-font-family: 'Montserrat';
+		-fx-font-weight: bold;
+}
+
+/* Transaction list layout */
+.transaction-list {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+		-fx-pref-width: 400px;
+}
+
+/* Scroll pane styling */
+.overview-scroll-pane {
+    -fx-fit-to-width: true;
+    -fx-fit-to-height: true;
+}
+
+/* Charts layout */
+.charts-pane {
+		-fx-max-width: 400px;
+		-fx-min-width: 300px;
+}
+
+
+/****************************************
+Analysis page section
+*****************************************/
+
+.button-row {
+		-fx-padding: 10px 0;
+}
+
+.category-list {
+    -fx-pref-width: 340px;
+    -fx-min-width: 340px;
+    -fx-max-width: 340px;
+}
+
+.category-list-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.category-item {
+    -fx-padding: 5px;
+    -fx-pref-width: 300px;
+		-fx-alignment: center-left;
+		-fx-min-height: 50px;
+		-fx-background-radius: 10px;
+}
+
+.category-name {
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+    -fx-min-width: 50px;
+}
+
+.category-total {
+    -fx-alignment: center-right; /* Align the total label to the right */
+    -fx-padding: 0 10 0 0; /* Optional: Add right padding */
+}
+
+.category-list-scroll {
+	-fx-min-width: 360px;
+}
+
+
+/****************************************
+Account page section
+*****************************************/
+.account-pane {
+    -fx-border-width: 1;
+    -fx-border-radius: 20px;
+}
+
+.account-name {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}
+
+.account-balance {
+    -fx-font-size: 16;
+}
+
+.arrow {
+    -fx-font-size: 18;
+}
+
+
+/****************************************
+Savings page section
+*****************************************/
+
+
+/****************************************
+Settings page section
+*****************************************/
+.header1 {
+	-fx-font-size: 23px;
+}
+
+.header2 {
+	-fx-font-size: 19px;
+}
+
+.form-label {
+	-fx-font-size: 14px;
+}
+
+.settings-button {
+	-fx-background-radius: 5px;
+	-fx-border-width: 1px;
+	-fx-border-radius: 5px;
+	-fx-cursor: hand;
+}
+
+.trash-icon, .edit-icon {
+    -fx-background-size: 16px 16px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-min-width: 16px;
+    -fx-min-height: 16px;
+    -fx-cursor: hand; /* Optional: makes the cursor a pointer on hover */
+}
+
+.general-row {
+	-fx-min-height: 50px;
+	-fx-padding: 10px 0;
+}
+
+.general-row Label {
+	-fx-padding: 5px;
+	-fx-min-width: 150px;
+}
+
+toggle-switch {
+	-fx-padding: 0;
+	-fx-margin: 0;
+}

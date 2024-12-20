@@ -1,0 +1,268 @@
+/**************************
+General section
+**************************/
+
+.fill-red {
+	-fx-text-fill: #d53e4f;
+}
+
+.fill-green {
+	-fx-text-fill:#66c2a5;
+}
+
+.fill-yellow {
+	-fx-text-fill: #ffce08;
+}
+
+.fill-blue {
+	-fx-text-fill: #4774d9;
+}
+
+.fill-neutral {
+	-fx-text-fill: #333;
+}
+
+.border-red {
+	-fx-border-color: #d53e4f;
+}
+
+.border-green {
+	-fx-border-color:#66c2a5;
+}
+
+.border-yellow {
+	-fx-border-color: #ffce08;
+}
+
+.border-blue {
+	-fx-border-color:#4774d9;
+}
+
+.border-neutral {
+	-fx-border-color: #333;
+}
+
+.background-red {
+	-fx-background-color: #d53e4f;
+}
+
+.background-yellow {
+	-fx-background-color: #ffce08;
+}
+
+.background-green {
+	-fx-background-color:#66c2a5;
+}
+
+.background-blue {
+	-fx-background-color: #4774d9;
+}
+
+.background-neutral {
+	-fx-background-color: white;
+}
+
+.fill-red.border-red:hover, .fill-red.border-red.active {
+	-fx-background-color: #d53e4f;
+	-fx-border-color: #d53e4f;
+	-fx-text-fill: white;
+}
+
+.fill-green.border-green:hover, .fill-green.border-green.active {
+	-fx-background-color:#66c2a5;
+	-fx-border-color: #66c2a5;
+	-fx-text-fill: white;
+}
+
+.fill-yellow.border-yellow:hover, .fill-yellow.border-yellow.active {
+	-fx-background-color: #ffce08;
+	-fx-border-color:  #ffce08;
+	-fx-text-fill: white;
+}
+
+.fill-blue.border-blue:hover, .fill-blue.border-blue.active {
+	-fx-background-color: #4774d9;
+	-fx-border-color:  #4774d9;
+	-fx-text-fill: white;
+}
+
+.fill-neutral.border-neutral:hover, .fill-neutral.border-neutral.active {
+	-fx-background-color: #333;
+	-fx-border-color: #333;
+	-fx-text-fill: white;
+}
+
+.item:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.progress-background {
+    -fx-fill: #eee; /* Light green background */
+}
+
+.button {
+	-fx-background-color: transparent;
+	-fx-border-color: grey;
+	-fx-text-fill: grey;
+}
+
+/*Circular progress*/
+.circular-progress .progress-circle {
+    -fx-stroke: #3288bd; /* Deep blue */
+}
+
+.circular-progress .background-circle {
+    -fx-stroke: lightgray;
+}
+
+.circular-progress .progress-circle.progress-complete {
+    -fx-stroke: #66c2a5; /* Cool green */
+}
+
+/*Doughtnut chart*/
+.doughnut-chart-inner-circle {
+	-fx-fill: white;
+}
+
+/**************************
+Dialog section
+**************************/
+
+.modal-content {
+	-fx-background-color: white;
+}
+
+.modal-overlay {
+	-fx-background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Input fields */
+.input-field,
+.combo-box {
+    -fx-background-color: transparent;
+    -fx-border-color: #333; /* Dark blue */
+}
+
+/**************************
+Navigation Pane Section
+**************************/
+
+/* Navigation pane */
+.navigation-pane:hover {
+    -fx-background-color: #3288bd;/* Cool green for hover */
+}
+
+.active-nav-pane {
+    -fx-background-color: #4774d9; /* Deep blue for active */
+}
+
+.active-nav-pane:hover {
+    -fx-background-color: #4774d9;
+}
+
+.toggle-sidebar-button {
+	-fx-background-color: transparent;
+	-fx-font-weight: normal;
+}
+
+.toggle-sidebar-button:hover {
+    -fx-background-color: #ddd; /* Cooler green */
+}
+
+.Overview-icon {
+	-fx-background-image: url("/Overview.png");
+}
+
+.Analysis-icon {
+	-fx-background-image: url("/Analysis.png");
+}  
+
+.Accounts-icon {
+	-fx-background-image: url("/Accounts.png");
+} 
+
+.Savings-icon {
+	-fx-background-image: url("/Savings.png");
+} 
+
+.Settings-icon {
+	-fx-background-image: url("/Settings.png");
+} 
+
+.navigation-pane:hover .Overview-icon, .active-nav-pane .Overview-icon {
+	-fx-background-image: url("/Overview_hover.png");
+}
+
+.navigation-pane:hover .Analysis-icon, .active-nav-pane .Analysis-icon {
+	-fx-background-image: url("/Analysis_hover.png");
+}
+
+.navigation-pane:hover .Accounts-icon, .active-nav-pane .Accounts-icon {
+	-fx-background-image: url("/Accounts_hover.png");
+}
+
+.navigation-pane:hover .Savings-icon, .active-nav-pane .Savings-icon {
+	-fx-background-image: url("/Savings_hover.png");
+}
+
+.navigation-pane:hover .Settings-icon, .active-nav-pane .Settings-icon {
+	-fx-background-image: url("/Settings_hover.png");
+}
+
+.navigation-pane:hover .nav-label, .active-nav-pane .nav-label {
+	-fx-text-fill: white;
+}
+
+/**************************
+Cross Page Section
+**************************/
+
+/* Disabled button text color */
+.nav-button:disabled {
+    -fx-text-fill: grey;
+		-fx-background-color: transparent;
+}
+
+/**************************
+Analysis Page Section
+**************************/
+
+
+
+/****************************************
+Accounts page section
+*****************************************/
+.account-pane {
+	-fx-border-color: gray;
+}
+
+/****************************************
+Savings page section
+*****************************************/
+
+/****************************************
+Settings page section
+*****************************************/
+.account-item {
+	-fx-background-color: transparent;
+}
+
+.account-item:hover {
+	-fx-background-color : #e6f598; /* Light green on hover */
+}
+
+.trash-icon {
+	-fx-background-image: url("/trash-light.png");
+}
+
+.trash-icon:hover {
+	-fx-background-image: url("/trash-hover.png");
+}
+
+.edit-icon {
+	-fx-background-image: url("/edit-light.png");
+}
+
+.edit-icon:hover {
+	-fx-background-image: url("/edit-hover.png");
+}
