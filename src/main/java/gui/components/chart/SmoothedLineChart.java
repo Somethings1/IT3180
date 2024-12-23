@@ -27,7 +27,7 @@ public class SmoothedLineChart extends StackPane {
         NumberAxis yAxis = new NumberAxis();
         yAxis.setTickLabelFormatter(new NumberAxis.DefaultFormatter(yAxis) {
             @Override
-            public String toString(Numbergetsobject) {
+            public String toString(Number object) {
                 return formatNumber(object.doubleValue());
             }
         });
