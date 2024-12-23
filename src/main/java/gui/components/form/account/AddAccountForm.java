@@ -58,7 +58,7 @@ public class AddAccountForm extends VBox {
         // Buttons (Cancel & Save)
         HBox buttons = new HBox(10);
         buttons.setAlignment(Pos.CENTER);
-        
+
         Button cancelButton = new Button("Cancel");
         cancelButton.setOnAction(e -> modal.close());
         cancelButton.getStyleClass().addAll("button", "fill-neutral", "border-neutral");
@@ -68,7 +68,7 @@ public class AddAccountForm extends VBox {
         saveButton.getStyleClass().addAll("button", "fill-blue", "border-blue");
 
         buttons.getChildren().addAll(cancelButton, saveButton);
-        
+
         // Add all components to the form
         getChildren().addAll(titleLabel, nameRow, balanceRow, buttons);
     }
@@ -79,7 +79,7 @@ public class AddAccountForm extends VBox {
         	double balance = Double.parseDouble(balanceField.getText());
 
             // Create a new Account instance
-            Account newAccount = new Account(App.getInstance().getAccountList().getLast().getId() + 1, name, "Account", balance, 0);
+            Account newAccount = new Account(0, name, "Account", balance, 0);
         	new AccountService().addAccount(newAccount);
             modal.close();
             settingsPage.refresh();

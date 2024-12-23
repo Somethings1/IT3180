@@ -28,26 +28,26 @@ public class AddSavingForm extends VBox {
         this.modal = modal;
         this.settingsPage = settingsPage;
     }
-    
+
     private Region createSpacer () {
     	Region region = new Region();
     	HBox.setHgrow(region, Priority.ALWAYS);
     	return region;
     }
-    
+
     private void setupForm() {
         setSpacing(20);
 
         Label titleLabel = new Label("Add Saving");
         titleLabel.getStyleClass().add("header1");
-        
+
         Label nameLabel = new Label("Saving name: ");
         nameField = new TextField();
         nameField.setPromptText("Saving Name");
         nameField.getStyleClass().add("input-field");
         HBox nameRow = new HBox(10, nameLabel, createSpacer(), nameField);
-        
-        
+
+
         Label goalLabel = new Label("Goal amount: ");
         goalField = new TextField("0");
         goalField.setPromptText("Goal Amount");
@@ -56,7 +56,7 @@ public class AddSavingForm extends VBox {
 
         HBox buttons = new HBox(10);
         buttons.setAlignment(Pos.CENTER);
-        
+
         Button cancelButton = new Button("Cancel");
         cancelButton.setOnAction(e -> modal.close());
         cancelButton.getStyleClass().addAll("button", "fill-neutral", "border-neutral");
@@ -66,7 +66,7 @@ public class AddSavingForm extends VBox {
         saveButton.getStyleClass().addAll("button", "fill-blue", "border-blue");
 
         buttons.getChildren().addAll(cancelButton, saveButton);
-        
+
         getChildren().addAll(titleLabel, nameRow, goalRow, buttons);
     }
 
@@ -74,10 +74,10 @@ public class AddSavingForm extends VBox {
         try {
         	String name = nameField.getText();
             double goal = Double.parseDouble(goalField.getText());
-            Account newSaving = new Account(App.getInstance().getAccountList().getLast().getId() + 1, name, "Saving", 0, goal);
-            
+            Account newSaving = new Account(0, name, "Saving", 0, goal);
+
         	new AccountService().addAccount(newSaving);
-        	
+
         	modal.close();
             settingsPage.refresh();
         }

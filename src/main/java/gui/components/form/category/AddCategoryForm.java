@@ -36,7 +36,7 @@ public class AddCategoryForm extends VBox {
         HBox.setHgrow(region, Priority.ALWAYS);
         return region;
     }
-    
+
     private void setupForm(String categoryType) {
         setSpacing(20);
 
@@ -76,7 +76,7 @@ public class AddCategoryForm extends VBox {
         saveButton.getStyleClass().addAll("button", "fill-blue", "border-blue");
 
         buttons.getChildren().addAll(cancelButton, saveButton);
-        
+
         // Add all components to the form
         getChildren().addAll(titleLabel, nameRow, typeRow, budgetRow, buttons);
     }
@@ -88,8 +88,8 @@ public class AddCategoryForm extends VBox {
 
         try {
             budget = Double.parseDouble(budgetField.getText());
-            
-            Category newCategory = new Category(App.getInstance().getCategoryList().getLast().getId() + 1, name, budget, type);
+
+            Category newCategory = new Category(0, name, budget, type);
             new CategoryService().addCategory(newCategory);
             modal.close();
             settingsPage.refresh();
