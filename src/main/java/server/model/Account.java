@@ -68,7 +68,7 @@ public class Account {
 		AccountService accountService = new AccountService();
 		
 		if (app.latestTime()) return this.balance;
-		if (app.isMonthView()) return accountService.getBalance(this.id, app.getYear(), app.getMonth());
+
 		return accountService.getBalance(this.id, app.getYear(), 12);
 	}
 	
