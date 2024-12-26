@@ -1,0 +1,337 @@
+/**************************
+General section
+**************************/
+* {
+	-fx-text-fill: #ECDFCC;
+}
+
+.main {
+	-fx-background-color: #1E201E;
+}
+
+.main-layout {
+	-fx-background-color: #1E201E;
+}
+
+.no-fill {
+	-fx-background-color: transparent;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.chart-legend {
+		 -fx-background-color: #3C3D37;
+}
+
+.chart-pie-label {
+	-fx-fill: #ECDFCC;
+}
+
+.fill-red {
+	-fx-text-fill: #d53e4f;
+}
+
+.fill-green {
+	-fx-text-fill:#66c2a5;
+}
+
+.fill-yellow {
+	-fx-text-fill: #ffce08;
+}
+
+.fill-blue {
+	-fx-text-fill: #4774d9;
+}
+
+.fill-neutral {
+	-fx-text-fill: #ECDFCC;
+}
+
+.border-red {
+	-fx-border-color: #d53e4f;
+}
+
+.border-green {
+	-fx-border-color:#66c2a5;
+}
+
+.border-yellow {
+	-fx-border-color: #ffce08;
+}
+
+.border-blue {
+	-fx-border-color:#4774d9;
+}
+
+.border-neutral {
+	-fx-border-color: #ECDFCC;
+}
+
+.background-red {
+	-fx-background-color: #d53e4f;
+}
+
+.background-yellow {
+	-fx-background-color: #ffce08;
+}
+
+.background-green {
+	-fx-background-color:#66c2a5;
+}
+
+.background-blue {
+	-fx-background-color: #4774d9;
+}
+
+.background-neutral {
+	-fx-background-color: #1E201E;
+}
+
+.button {
+	-fx-background-color: transparent;
+	-fx-border-color: lightgrey;
+	-fx-text-fill: lightgrey;
+}
+
+.fill-red.border-red:hover, .fill-red.border-red.active {
+	-fx-background-color: #d53e4f;
+	-fx-border-color: #d53e4f;
+	-fx-text-fill: #ECDFCC;
+}
+
+.fill-green.border-green:hover, .fill-green.border-green.active {
+	-fx-background-color:#66c2a5;
+	-fx-border-color: #66c2a5;
+	-fx-text-fill: #ECDFCC;
+}
+
+.fill-yellow.border-yellow:hover, .fill-yellow.border-yellow.active {
+	-fx-background-color: #ffce08;
+	-fx-border-color:  #ffce08;
+	-fx-text-fill: #ECDFCC;
+}
+
+.fill-blue.border-blue:hover, .fill-blue.border-blue.active {
+	-fx-background-color: #4774d9;
+	-fx-border-color:  #4774d9;
+	-fx-text-fill: #ECDFCC;
+}
+
+.fill-neutral.border-neutral:hover, .fill-neutral.border-neutral.active {
+	-fx-background-color: #ECDFCC;
+	-fx-border-color: #ECDFCC;
+	-fx-text-fill: #1E201E;
+}
+
+.item:hover {
+    -fx-background-color: #3C3D37;
+}
+
+.progress-background {
+    -fx-fill: #3C3D37;
+}
+
+/*Circular progress*/
+.circular-progress .progress-circle {
+    -fx-stroke: #3288bd; /* Deep blue */
+}
+
+.circular-progress .background-circle {
+    -fx-stroke: #3C3D37;
+}
+
+.circular-progress .progress-circle.progress-complete {
+    -fx-stroke: #66c2a5; /* Cool green */
+}
+
+
+/*Doughnut chart*/
+
+.doughnut-chart-inner-circle {
+	-fx-fill: #1E201E;
+}
+
+/*Line chart*/
+
+.line-chart .axis {
+    -fx-tick-label-fill: #ECDFCC;   /* Axis tick label color */
+    -fx-tick-mark-fill: #3C3D37;    /* Axis tick mark color */
+    -fx-stroke: #3C3D37;            /* Axis line color */
+}
+
+/* Style for the X-axis */
+.line-chart .x-axis {
+    -fx-tick-mark-fill: #3C3D37;    /* X-axis tick mark color */
+    -fx-stroke: #3C3D37;            /* X-axis line color */
+}
+
+/* Style for the Y-axis */
+.line-chart .y-axis {
+    -fx-tick-mark-fill: #3C3D37;    /* Y-axis tick mark color */
+    -fx-stroke: #3C3D37;            /* Y-axis line color */
+}
+
+/* Style for the gridlines */
+.line-chart .chart-grid-lines {
+    -fx-stroke: #3C3D37;            /* Gridline color */
+    -fx-stroke-width: 0.5px;        /* Gridline width */
+}
+/**************************
+Dialog section
+**************************/
+
+.modal-content {
+	-fx-background-color: #1E201E;
+}
+
+.modal-overlay {
+	-fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+.combo-box-popup, .combo-box-popup .list-cell {
+	-fx-background-color: #1E201E;
+}
+
+.combo-box-popup .list-cell:hover {
+	-fx-background-color: #3C3D37;
+}
+
+/* Input fields */
+.input-field,
+.combo-box {
+    -fx-background-color: transparent;
+    -fx-border-color: #ECDFCC; /* Dark blue */
+}
+
+.input-field .text-field {
+	-fx-background-color: transparent;
+}
+/**************************
+Navigation Pane Section
+**************************/
+
+/* Navigation pane */
+.navigation-pane:hover {
+    -fx-background-color: #CAC6AC;/* Cool green for hover */
+}
+
+.active-nav-pane {
+    -fx-background-color: #ECDFCC; /* Deep blue for active */
+}
+
+.active-nav-pane:hover {
+    -fx-background-color: #ECDFCC;
+}
+
+.toggle-sidebar-button {
+	-fx-background-color: transparent;
+	-fx-font-weight: normal;
+}
+
+.toggle-sidebar-button:hover {
+    -fx-background-color: #ddd; /* Cooler green */
+}
+
+.Overview-icon {
+	-fx-background-image: url("/Overview_hover.png");
+}
+
+.Analysis-icon {
+	-fx-background-image: url("/Analysis_hover.png");
+}  
+
+.Accounts-icon {
+	-fx-background-image: url("/Accounts_hover.png");
+} 
+
+.Savings-icon {
+	-fx-background-image: url("/Savings_hover.png");
+} 
+
+.Settings-icon {
+	-fx-background-image: url("/Settings_hover.png");
+} 
+
+.navigation-pane:hover .Overview-icon, .active-nav-pane .Overview-icon {
+	-fx-background-image: url("/Overview.png");
+}
+
+.navigation-pane:hover .Analysis-icon, .active-nav-pane .Analysis-icon {
+	-fx-background-image: url("/Analysis.png");
+}
+
+.navigation-pane:hover .Accounts-icon, .active-nav-pane .Accounts-icon {
+	-fx-background-image: url("/Accounts.png");
+}
+
+.navigation-pane:hover .Savings-icon, .active-nav-pane .Savings-icon {
+	-fx-background-image: url("/Savings.png");
+}
+
+.navigation-pane:hover .Settings-icon, .active-nav-pane .Settings-icon {
+	-fx-background-image: url("/Settings.png");
+}
+
+.navigation-pane:hover .nav-label, .active-nav-pane .nav-label {
+	-fx-text-fill: #1E201E;
+}
+
+/**************************
+Cross Page Section
+**************************/
+
+/* Disabled button text color */
+.nav-button:disabled {
+    -fx-text-fill: grey;
+		-fx-background-color: transparent;
+}
+
+/**************************
+Analysis Page Section
+**************************/
+
+
+
+/****************************************
+Accounts page section
+*****************************************/
+.account-pane {
+	-fx-border-color: gray;
+}
+
+.account-name {
+	-fx-text-fill: #ECDFCC;
+}
+
+/****************************************
+Savings page section
+*****************************************/
+
+/****************************************
+Settings page section
+*****************************************/
+.account-item {
+	-fx-background-color: transparent;
+}
+
+.account-item:hover {
+	-fx-background-color : #e6f598; /* Light green on hover */
+}
+
+.trash-icon {
+	-fx-background-image: url("/trash-dark.png");
+}
+
+.trash-icon:hover {
+	-fx-background-image: url("/trash-hover.png");
+}
+
+.edit-icon {
+	-fx-background-image: url("/edit-dark.png");
+}
+
+.edit-icon:hover {
+	-fx-background-image: url("/edit-hover.png");
+}

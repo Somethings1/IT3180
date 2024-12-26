@@ -706,9 +706,6 @@ public class SmoothedChart<X, Y> extends AreaChart<X, Y> {
 
 
     // ******************** Internal Methods **********************************
-    @Override public String getUserAgentStylesheet() {
-        return SmoothedChart.class.getResource("smoothed-chart.css").toExternalForm();
-    }
 
     @Override protected void layoutPlotChildren() {
         super.layoutPlotChildren();
