@@ -43,11 +43,11 @@ public class SettingsPage extends ScrollPane {
     public SettingsPage() {
         initialize();
     }
-    
+
     /*
      * General Functionality
     */
-    
+
     public void refresh () {
     	createContent();
     	setContent(content);
@@ -56,11 +56,11 @@ public class SettingsPage extends ScrollPane {
     private void initialize() {
         setFitToWidth(true);
         getStyleClass().addAll("main-layout", "edge-to-edge");
-        
+
         createContent();
         setContent(content);
     }
-    
+
     private void createContent () {
     	content = new VBox(20);
         content.getChildren().addAll(createTitle(),
@@ -76,22 +76,22 @@ public class SettingsPage extends ScrollPane {
         title.getStyleClass().addAll("page-title");
         return title;
     }
-    
+
     private Label createHeader(String headerText) {
         Label header = new Label(headerText);
         header.getStyleClass().add("header1");
         return header;
     }
-    
+
     /*
      * Section: General
     */
 
     private VBox createGeneralSection() {
         VBox generalSection = new VBox();
-        generalSection.getChildren().addAll(createHeader("General"), 
-                                            createThemeRow(), 
-                                            createCurrencyRow(), 
+        generalSection.getChildren().addAll(createHeader("General"),
+                                            createThemeRow(),
+                                            createCurrencyRow(),
                                             createCurrencySelectionRow(),
                                             createDecimalPlacesRow());
         return generalSection;
@@ -160,7 +160,7 @@ public class SettingsPage extends ScrollPane {
     private void toggleTheme(ToggleSwitch toggleSwitch) {
         boolean isDarkMode = toggleSwitch.isSelected();
         AppSettings.getInstance().setDarkMode(isDarkMode);
-        
+
         Scene scene = getScene();
         Node root = scene.getRoot();
         FadeTransition fadeOut = new FadeTransition(Duration.millis(300), root);
@@ -170,7 +170,7 @@ public class SettingsPage extends ScrollPane {
         FadeTransition fadeIn = new FadeTransition(Duration.millis(300), root);
         fadeIn.setFromValue(0.0);
         fadeIn.setToValue(1.0);
-        
+
         fadeOut.setOnFinished(e -> {
             // Remove current stylesheet and apply the new one
             if (isDarkMode) {
@@ -197,7 +197,7 @@ public class SettingsPage extends ScrollPane {
     private void updateDecimalPlaces(Integer newDecimalPlaces) {
         AppSettings.getInstance().setNumberOfDecimalPlaces(newDecimalPlaces);
     }
-    
+
     /*
      * Section: Accounts and Savings
     */
@@ -205,7 +205,7 @@ public class SettingsPage extends ScrollPane {
     private HBox createAccountsAndSavingsSection() {
         VBox accountsColumn = createAccountOrSavingColumn("Accounts", account -> account.getGoal() == 0, this::addAccount);
         VBox savingsColumn = createAccountOrSavingColumn("Savings", account -> account.getGoal() != 0, this::addSaving);
-        
+
         HBox section = new HBox(40, accountsColumn, savingsColumn);
         HBox.setHgrow(accountsColumn, Priority.ALWAYS);
         HBox.setHgrow(savingsColumn, Priority.ALWAYS);
@@ -216,7 +216,7 @@ public class SettingsPage extends ScrollPane {
     private VBox createAccountOrSavingColumn(String titleText, java.util.function.Predicate<Account> filter, Runnable addAction) {
         VBox column = new VBox(0);
         column.getChildren().add(createHeaderWithAddButton(titleText, addAction));
-        
+
         List<Account> accounts = App.getInstance().getAccountList();
         accounts.stream().filter(filter).map(this::createAccountBox).forEach(column.getChildren()::add);
         return column;
@@ -242,7 +242,7 @@ public class SettingsPage extends ScrollPane {
     private Label createEditIcon(Object item) {
         Label editIcon = new Label();
         editIcon.getStyleClass().add("edit-icon");
-        
+
         if (item instanceof Account && ((Account) item).getGoal() == 0) {
             editIcon.setOnMouseClicked(e -> editAccount((Account) item));
         } else if (item instanceof Account) {
@@ -250,7 +250,7 @@ public class SettingsPage extends ScrollPane {
         } else if (item instanceof Category) {
             editIcon.setOnMouseClicked(e -> editCategory((Category) item));
         }
-        
+
         return editIcon;
     }
 
@@ -260,7 +260,7 @@ public class SettingsPage extends ScrollPane {
         trashIcon.setOnMouseClicked(e -> deleteAction.run());
         return trashIcon;
     }
-    
+
     /*
      * Section: Categories
     */
@@ -268,7 +268,7 @@ public class SettingsPage extends ScrollPane {
     private HBox createCategorySettingsSection() {
         VBox incomeCategoryColumn = createCategoryColumn("Income Categories", "income", this::addIncomeCategory);
         VBox expenseCategoryColumn = createCategoryColumn("Expense Categories", "expense", this::addExpenseCategory);
-        
+
         HBox section = new HBox(40, incomeCategoryColumn, expenseCategoryColumn);
         HBox.setHgrow(incomeCategoryColumn, Priority.ALWAYS);
         HBox.setHgrow(expenseCategoryColumn, Priority.ALWAYS);
@@ -278,7 +278,7 @@ public class SettingsPage extends ScrollPane {
     private VBox createCategoryColumn(String titleText, String categoryType, Runnable addAction) {
         VBox column = new VBox(0);
         column.getChildren().add(createHeaderWithAddButton(titleText, addAction));
-        
+
         List<Category> categories = App.getInstance().getCategoryList();
         categories.stream().filter(category -> category.getType().equals(categoryType))
                 .map(this::createCategoryBox).forEach(column.getChildren()::add);
@@ -300,7 +300,7 @@ public class SettingsPage extends ScrollPane {
         categoryName.getStyleClass().add("form-label");
         return categoryName;
     }
-    
+
     /*
      * Section: Export
     */
@@ -312,7 +312,7 @@ public class SettingsPage extends ScrollPane {
         exportButton.setOnAction(e -> handleExport());
         return new VBox(10, header, exportButton);
     }
-    
+
     /*
      * Section: Database management
     */
@@ -329,7 +329,7 @@ public class SettingsPage extends ScrollPane {
 
         return new VBox(10, header, exportButton, importButton);
     }
-    
+
     private void handleExportDatabase() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Export Database");
@@ -346,7 +346,7 @@ public class SettingsPage extends ScrollPane {
             }
         }
     }
-    
+
     private void handleImportDatabase() {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Import Database");
@@ -402,23 +402,26 @@ public class SettingsPage extends ScrollPane {
     private void removeAccount(int accountId) {
     	ConfirmationModal modal = new ConfirmationModal();
     	modal.setContent("Remove this account?", "Removing this account will remove all transactions related to this account. Are you sure?");
-    	modal.show();
-    	
-    	if (modal.getResult()) {
-    		new AccountService().removeAccount(accountId);
-    	}
+    	modal.show(result -> {
+            if (result) {
+                new AccountService().removeAccount(accountId);
+                refresh();
+
+            }
+        });
     }
 
     private void removeCategory(int categoryId) {
     	ConfirmationModal modal = new ConfirmationModal();
     	modal.setContent("Remove this category?", "Removing this category will remove all transactions with this category. Are you sure?");
-    	modal.show();
-    	
-    	if (modal.getResult()) {
-    		new CategoryService().removeCategory(categoryId);
-    	}
+    	modal.show(result -> {
+            if (result) {
+                new CategoryService().removeCategory(categoryId);
+                refresh();
+            }
+        });
     }
-    
+
     private void handleExport () {
     	Modal modal = new Modal();
     	modal.setContent(new ExportDataForm(modal));
@@ -453,3 +456,4 @@ public class SettingsPage extends ScrollPane {
         return headerWithButton;
     }
 }
+
